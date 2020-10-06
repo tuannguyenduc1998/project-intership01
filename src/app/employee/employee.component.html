@@ -1,0 +1,16 @@
+<p>Hello!</p>
+<div>
+  Cho biết số tuổi của bạn:
+  <button (click)="age = age - 1">-</button>
+  {{age}}
+  <button (click)="age = age + 1">+</button>
+  <ng-template *ngIf="age >= 18 ; else under18">
+    <div>
+      Bạn đã đủ 18+ để xem nội dung này
+    </div>
+  </ng-template>
+  <ng-template #under18>
+    <br>Bạn chưa đủ tuổi để xem nội dung này
+  </ng-template>
+</div>
+<router-outlet></router-outlet>
